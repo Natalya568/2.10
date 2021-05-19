@@ -1,0 +1,52 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="Chart.min.css">
+    <script type="text/javascript" src="Chart.min.js"></script>
+
+
+    <canvas id="myChart" width="400" height="200"></canvas>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'pie',
+
+//Создание графиков
+            data: {
+                labels: ['2017', '2018', '2019', '2020', '2021'],
+                datasets: [{
+                    label: '# of Votes',
+                    backgroundColor: [
+                        'rgba(216, 191, 216, 0.7)',
+                        'rgba(238, 130, 238, 0.7)',
+                        'rgba(148, 0, 211, 0.7)',
+                        'rgba(186, 85, 211, 0.7)',
+                        'rgba(139, 0, 139, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgba(216, 191, 216, 1)',
+                        'rgba(238, 130, 238, 1)',
+                        'rgba(148, 0, 211, 1)',
+                        'rgba(186, 85, 211, 1)',
+                        'rgba(139, 0, 139, 1)'
+                    ],
+			data: [10, 19, 10, 5, 20],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+        </script>
+</head>
+<body>
+    
+    
+</body>
+</html>
